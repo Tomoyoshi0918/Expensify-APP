@@ -1,0 +1,52 @@
+JSX -Javascript XML 
+Javascriptのテンプレート
+
+node プラグイン確認
+shift + command + G 
+/Users/mariohane/.nodebrew/current/bin/node
+
+babel変換後のファイル
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react
+
+watchモード
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+babel src/playground/es6-let-const.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+■index.htmlに書いてたcdn
+  <script src="https://unpkg.com/react@16.0.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.development.js"></script>
+
+
+3/29
+■15
+アロー関数 → this使用可能 forEach外の変数
+
+3/30
+■33,35,37 State基礎 写経あり
+counter-exsample.js 
+build-it-visible.js
+src/app.js 応用ver. 全体の構造を理解して写経
+
+State コンポーネント内で使用できる値
+Props 別のコンポーネントから値を受け渡しできる
+
+4/1
+■webpack→JSX
+-コマンド
+react reactDOM
+-ファイル
+package.json → babel-loader
+.babelrc
+
+■section8
+styles.scss 各scssファイルの集合体(@import)
+_base/base.scss body,html全体のデザイン
+_component/*.scss 各パーツ毎のデザイン
+
+■写経用保存
+section8までのソースをデスクトップに保管 indecision-app
+section9からはまた別のアプリケーションを作成
+
+■セクション79
+<a href="/"></a> サーバー側ルーティング
+<Link to="/"></Link> クライアント側ルーティング

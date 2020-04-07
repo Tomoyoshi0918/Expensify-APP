@@ -1,0 +1,22 @@
+
+■セクション88
+分割代入 destructuring
+
+■セクション90
+redux store基礎 1ファイルで構成されている 見直しで役に立つと思う
+
+■セクション93
+const removeExpense = ({ id } = {}) => ({
+  type: 'REMOVE_EXPENSE',
+  id
+});
+１番目のidの意味
+
+■セクション99
+ファイル分割
+※以前のセクション(97)は一つのファイルにしてる
+
+Provider connect
+
+■セクション103
+connectでdispatchを使用する

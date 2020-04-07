@@ -1,0 +1,28 @@
+■セクション111
+自動テスト ただし今回は手動でした方がいいレベルであるがあえてテスト練習
+Jest テストフレームワーク
+
+■セクション117
+expensesテスト
+reducers/state→action→state
+fixtures/
+selectors/選択
+
+■セクション119
+Enzyme 
+jest.config.json
+"test": "jest --config=jest.config.json"
+shallow render componentのみはしたせてテスト
+, toMatchSnapshot
+
+■セクション123
+onSubmitSpy = jest.fn()
+onDateChange → const now = moment();
+onFocusChange → const focused = true;
+全体の処理目的はなんとなく理解できる程度。
+メソッド名を見ただけでどこの処理のことなのかは把握できるようにしたい
+
+■セクション124
+mapDispatchToProps → actionをstoreにdispatch
+mapStateToProps → storeからgetState
+beforeEach テストケースごとに同等のメソッドを利用できる
