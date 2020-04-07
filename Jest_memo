@@ -26,3 +26,6 @@ onFocusChange → const focused = true;
 mapDispatchToProps → actionをstoreにdispatch
 mapStateToProps → storeからgetState
 beforeEach テストケースごとに同等のメソッドを利用できる
+
+■ セクション134
+css/sourceMap: true/ デベロッパーツールのcssにカーソル 合わせたらソースパスが表示される
