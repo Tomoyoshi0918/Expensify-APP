@@ -29,3 +29,7 @@ beforeEach テストケースごとに同等のメソッドを利用できる
 
 ■ セクション134
 css/sourceMap: true/ デベロッパーツールのcssにカーソル 合わせたらソースパスが表示される
+
+■セクション135
+express作成(server.js)→ローカルサーバー接続(:error)→yarn run build:prod→接続成功！
+historyApiFallback: true 存在しないURLを手動で入力すると /index.htmlに遷移
