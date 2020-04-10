@@ -3,8 +3,8 @@ import {
   setStartDate,
   setEndDate,
   setTextFilter,
-  sortByDate,
-  sortByAmount
+  sortByAmount,
+  sortByDate
 } from '../../actions/filters';
 
 test('should generate set start date action object', () => {
@@ -15,7 +15,7 @@ test('should generate set start date action object', () => {
   });
 });
 
-test('should generate set end date action object', () => {
+test('should generate set end date aciton object', () => {
   const action = setEndDate(moment(0));
   expect(action).toEqual({
     type: 'SET_END_DATE',
@@ -24,8 +24,8 @@ test('should generate set end date action object', () => {
 });
 
 test('should generate set text filter object with text value', () => {
-  const text = 'Something in'
-  const action = setTextFilter('Something in');
+  const text = 'Something in';
+  const action = setTextFilter(text);
   expect(action).toEqual({
     type: 'SET_TEXT_FILTER',
     text
@@ -40,10 +40,10 @@ test('should generate set text filter object with default', () => {
   });
 });
 
-test('should generate set text filter object for sortby date', () => {
+test('should generate action object for sort by date', () => {
   expect(sortByDate()).toEqual({ type: 'SORT_BY_DATE' });
-})
+});
 
-test('should generate set text filter object for sort by amount ', () => {
+test('should generate action object for sort by amount', () => {
   expect(sortByAmount()).toEqual({ type: 'SORT_BY_AMOUNT' });
-})
+});
