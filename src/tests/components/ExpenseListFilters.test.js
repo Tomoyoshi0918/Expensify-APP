@@ -1,4 +1,7 @@
 import React from 'react';
+import 'react-dates/initialize';
+import { DateRangePicker } from 'react-dates';
+import { withStyles } from '@material-ui/core/styles';
 import { shallow } from 'enzyme';
 import moment from 'moment';
 import { ExpenseListFilters } from '../../components/ExpenseListFilters';
@@ -73,6 +76,7 @@ test('should handle date changes', () => {
 
 test('hould handle date focus changes', () => {
   const calendarFocused = 'endDate';
+  // wrapper.find(('DateRangePicker')).prop('onFocusChange')(calendarFocused);
   wrapper.find('withStyles(DateRangePicker)').prop('onFocusChange')(calendarFocused);
   expect(wrapper.state('calendarFocused')).toBe(calendarFocused);
 });
