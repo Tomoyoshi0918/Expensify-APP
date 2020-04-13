@@ -13,7 +13,6 @@ export const ExpensesSummary = ({ expenseCount, expensesTotal }) => {
       <h1>Viewing {expenseCount} {expenseWord} totalling {formattedExpensesTotal}</h1>
     </div>
   )
-
 };
 
 const mapStateToProps = (state) => {
