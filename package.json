@@ -23,6 +23,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^25.3.0",
     "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
     "build": "^0.1.4",
     "css-loader": "3.5.1",
     "dev-server": "^0.1.0",
