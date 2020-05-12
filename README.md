@@ -1,15 +1,15 @@
 # 経費アプリ
 
--経費の管理アプリを作成致しました。
-React をメインに CRUD の知識を活かし作品にしました。
-firebase による Google アカウント認証を実装しております。
+-経費の管理アプリを作成致しました。  
+React をメインに CRUD の知識を活かし作品にしました。  
+firebase による Google アカウント認証を実装しております。  
 
-・公開アプリはこちらよりご確認いただけます → https://expensify.tomo-std.com
-※試作品につきましては自動でテストユーザーとしてログイン致します。
+・公開アプリはこちらよりご確認いただけます → https://expensify.tomo-std.com  
+※試作品につきましては自動でテストユーザーとしてログイン致します。  
 
-フロントエンド React/Javascript(ES6) HTML/SCSS
-サーバーサイド Node.js/express
-データベース firebase
+フロントエンド React/Javascript(ES6) HTML/SCSS  
+サーバーサイド Node.js/express  
+データベース firebase  
 
 -テスト Jest/Enzyme
 テスト内容は以下の通りとなります。
