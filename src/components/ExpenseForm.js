@@ -1,18 +1,18 @@
-import React from 'react';
-import moment from 'moment';
-import { SingleDatePicker } from 'react-dates';
+import React from "react";
+import moment from "moment";
+import { SingleDatePicker } from "react-dates";
 
 export default class ExpenseForm extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      description: props.expense ? props.expense.description : '',
-      note: props.expense ? props.expense.note : '',
-      amount: props.expense ? (props.expense.amount / 100).toString() : '',
+      description: props.expense ? props.expense.description : "",
+      note: props.expense ? props.expense.note : "",
+      amount: props.expense ? (props.expense.amount / 100).toString() : "",
       createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
       calendarFocused: false,
-      error: ''
+      error: "",
     };
   }
   onDescriptionChange = (e) => {
@@ -42,14 +42,16 @@ export default class ExpenseForm extends React.Component {
     e.preventDefault();
 
     if (!this.state.description || !this.state.amount) {
-      this.setState(() => ({ error: 'Please provide description and amount.' }));
+      this.setState(() => ({
+        error: "備考欄と金額を入力してください",
+      }));
     } else {
-      this.setState(() => ({ error: '' }));
+      this.setState(() => ({ error: "" }));
       this.props.onSubmit({
         description: this.state.description,
         amount: parseFloat(this.state.amount, 10) * 100,
         createdAt: this.state.createdAt.valueOf(),
-        note: this.state.note
+        note: this.state.note,
       });
     }
   };
@@ -59,7 +61,7 @@ export default class ExpenseForm extends React.Component {
         {this.state.error && <p className="form__error">{this.state.error}</p>}
         <input
           type="text"
-          placeholder="Description"
+          placeholder="タイトル"
           autoFocus
           className="text-input"
           value={this.state.description}
@@ -67,7 +69,7 @@ export default class ExpenseForm extends React.Component {
         />
         <input
           type="text"
-          placeholder="Amount"
+          placeholder="金額"
           className="text-input"
           value={this.state.amount}
           onChange={this.onAmountChange}
@@ -81,16 +83,15 @@ export default class ExpenseForm extends React.Component {
           isOutsideRange={() => false}
         />
         <textarea
-          placeholder="Add a note for your expense (optional)"
+          placeholder="備考欄"
           className="textarea"
           value={this.state.note}
           onChange={this.onNoteChange}
-        >
-        </textarea>
+        ></textarea>
         <div>
-          <button className="button">Add Expense</button>
+          <button className="button">追加</button>
         </div>
       </form>
-    )
+    );
   }
 }

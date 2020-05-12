@@ -1,24 +1,28 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import numeral from 'numeral';
-import selectExpenses from '../selectors/expenses';
-import selectExpensesTotal from '../selectors/expenses-total';
+import React from "react";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import numeral from "numeral";
+import selectExpenses from "../selectors/expenses";
+import selectExpensesTotal from "../selectors/expenses-total";
 
 export const ExpensesSummary = ({ expenseCount, expensesTotal }) => {
-  const expenseWord = expenseCount === 1 ? 'expense' : 'expenses';
-  const formattedExpensesTotal = numeral(expensesTotal / 100).format('$0,0.00');
+  const formattedExpensesTotal = numeral(expensesTotal / 100).format("0,0");
 
   return (
     <div className="page-header">
       <div className="content-container">
-        <h1 className="page-header__title">Viewing <span>{expenseCount}</span> {expenseWord} totalling <span>{formattedExpensesTotal}</span></h1>
+        <h1 className="page-header__title">
+          登録経費数 <span>{expenseCount}</span> 個 合計金額 {""}
+          <span>{formattedExpensesTotal}</span> 円
+        </h1>
         <div className="page-header__actions">
-          <Link className="button" to="/create">Add Expense</Link>
+          <Link className="button" to="/create">
+            経費を追加する
+          </Link>
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 const mapStateToProps = (state) => {
@@ -26,7 +30,7 @@ const mapStateToProps = (state) => {
 
   return {
     expenseCount: visibleExpenses.length,
-    expensesTotal: selectExpensesTotal(visibleExpenses)
+    expensesTotal: selectExpensesTotal(visibleExpenses),
   };
 };
 

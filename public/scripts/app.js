@@ -1,9 +1,11 @@
-'use strict';
+"use strict";
 
-var _validator = require('validator');
+var _validator = require("validator");
 
 var _validator2 = _interopRequireDefault(_validator);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
-console.log(_validator2.default.isEmail('test'));
+console.log(_validator2.default.isEmail("test"));

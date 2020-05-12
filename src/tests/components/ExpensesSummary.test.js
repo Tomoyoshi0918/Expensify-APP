@@ -1,14 +1,18 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { ExpensesSummary } from '../../components/ExpensesSummary';
-import { TestScheduler } from 'jest';
+import React from "react";
+import { shallow } from "enzyme";
+import { ExpensesSummary } from "../../components/ExpensesSummary";
+import { TestScheduler } from "jest";
 
-test('should  correctly render ExpenmsesSummary with 1 expense', () => {
-  const wrapper = shallow(<ExpensesSummary expenseCount={1} expensesTotal={235} />)
+test("合計金額(個数)反映テスト", () => {
+  const wrapper = shallow(
+    <ExpensesSummary expenseCount={1} expensesTotal={235} />
+  );
   expect(wrapper).toMatchSnapshot();
 });
 
-test('should  correctly render ExpenmsesSummary with multiple expenses', () => {
-  const wrapper = shallow(<ExpensesSummary expenseCount={23} expensesTotal={23532857423} />)
+test("合計金額(複数)反映テスト", () => {
+  const wrapper = shallow(
+    <ExpensesSummary expenseCount={23} expensesTotal={23532857423} />
+  );
   expect(wrapper).toMatchSnapshot();
 });
