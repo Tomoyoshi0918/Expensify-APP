@@ -11,6 +11,8 @@ firebaseによるGoogleアカウント認証を実装しております。
 サーバーサイド Node.js/express  
 データベース firebase  
   
+■実装機能
+    
 -テスト  
 Jest/Enzyme
 テスト内容は以下の通りとなります。
